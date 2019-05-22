@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
 
-class HomeController extends Controller {
+class HomeController extends Controller {	
     public function index() {
-    	return view('home');
+    	$event = Event::all();
+    	return view('home', ['event' => $event]);
     }
 }
