@@ -16,3 +16,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+// Profile Controller
+Route::get('dashboard/profile', 'ProfileController@index')->name('profile');
+Route::put('dashboard/profile', 'ProfileController@update');
+Route::get('dashboard/profile/password', 'ProfileController@password')->name('password');
