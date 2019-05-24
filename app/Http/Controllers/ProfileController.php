@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\User;
 
 class ProfileController extends Controller {
@@ -32,7 +33,27 @@ class ProfileController extends Controller {
     	return redirect()->action('ProfileController@index')->with('status', 'Profile Updated');
     }
 
-    public function password() {
+    public function password(Request $request) {
     	return view('profile.password');
+    }
+
+    public function updatePassword(Request $request) {
+        // Validation Form Input
+        $validateData = $request->validate([
+            'old_password' => 'required|min:6',
+            'new_password' => 'required|confirmed|min:6',
+        ]);
+
+        // Check Validation New Password and Old Password
+        $user = User::find($request->user()->id);
+        if (Hash::check($request->old_password, $user->password)) {
+            // Update New Password to Database
+            $user->password = Hash::make($request->new_password);
+            $user->save();
+            return redirect()->action('ProfileController@password')->with('success', 'Password Updated');
+        }
+        else {
+            return redirect()->action('ProfileController@password')->with('error', 'Password Salah');
+        }
     }
 }
