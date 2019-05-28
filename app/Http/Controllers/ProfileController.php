@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 
 class ProfileController extends Controller {
-    public function index(Request $request) {
+    public function showProfile(Request $request) {
     	$user = User::find($request->user()->id);
-    	return view('profile.index', ['user' => $user]);
+    	return view('profile.profile', ['user' => $user]);
     }
 
-    public function update(Request $request) {
+    public function updateProfile(Request $request) {
         // Validation Form Input
         $validateData = $request->validate([
             'name' => 'required',
@@ -30,10 +30,10 @@ class ProfileController extends Controller {
         ]);
 
         // Redirect and Set Flash Session Data
-    	return redirect()->action('ProfileController@index')->with('status', 'Profile Updated');
+    	return redirect()->action('ProfileController@showProfile')->with('status', 'Profile Updated');
     }
 
-    public function password(Request $request) {
+    public function showPassword(Request $request) {
     	return view('profile.password');
     }
 
@@ -50,10 +50,10 @@ class ProfileController extends Controller {
             // Update New Password to Database
             $user->password = Hash::make($request->new_password);
             $user->save();
-            return redirect()->action('ProfileController@password')->with('success', 'Password Updated');
+            return redirect()->action('ProfileController@showPassword')->with('success', 'Password Updated');
         }
         else {
-            return redirect()->action('ProfileController@password')->with('error', 'Password Salah');
+            return redirect()->action('ProfileController@showPassword')->with('error', 'Password Salah');
         }
     }
 }
