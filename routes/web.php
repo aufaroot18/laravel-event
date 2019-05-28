@@ -17,8 +17,13 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-// Profile Controller
-Route::get('dashboard/profile', 'ProfileController@index')->name('profile');
-Route::put('dashboard/profile', 'ProfileController@update');
-Route::get('dashboard/profile/password', 'ProfileController@password')->name('password');
-Route::post('dashboard/profile/password', 'ProfileController@updatePassword');
+// Event Resource
+
+
+// Profile Resource
+Route::prefix('dashboard')->group(function() {
+	Route::get('profile', 'ProfileController@showProfile')->name('profile');
+	Route::put('profile', 'ProfileController@updateProfile');
+	Route::get('password', 'ProfileController@showPassword')->name('password');
+	Route::put('password', 'ProfileController@updatePassword');
+});
