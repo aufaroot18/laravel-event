@@ -11,7 +11,7 @@
           {{ session('status') }}
       </div>
   @endif
-  <form method="POST" action="/dashboard/profile">
+  <form method="POST" action="{{action('ProfileController@updateProfile')}}">
     @method('PUT')
     @csrf
   	<div class="form-group row">
