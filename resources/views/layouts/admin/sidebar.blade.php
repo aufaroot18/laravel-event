@@ -27,12 +27,12 @@
     Event
   </div>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{{action('EventController@createEvent')}}">
       <i class="fas fa-fw fa-chart-area"></i>
-      <span>Events</span></a>
+      <span>Create Events</span></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{{action('EventController@index')}}">
       <i class="fas fa-fw fa-chart-area"></i>
       <span>My Event</span></a>
   </li>
