@@ -18,7 +18,11 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 // Event Resource
-
+Route::prefix('dashboard')->group(function() {
+	Route::get('event/', 'EventController@index');
+	Route::get('event/create', 'EventController@createEvent');
+	Route::post('event', 'EventController@storeEvent');
+});
 
 // Profile Resource
 Route::prefix('dashboard')->group(function() {
