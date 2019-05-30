@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 class UsersTableSeeder extends Seeder
 {
@@ -16,16 +17,19 @@ class UsersTableSeeder extends Seeder
             	'name' => 'Admin',
             	'email' => 'admin@gmail.com',
             	'password' => bcrypt('AdminAdmin'),
+                'created_at' => Carbon::now(),
             ],
             [
             	'name' => 'Aufa',
             	'email' => 'aufa@gmail.com',
             	'password' => bcrypt('AufaAufa'),
+                'created_at' => Carbon::now(),
             ],
             [
                 'name' => 'Billah',
                 'email' => 'billah@gmail.com',
                 'password' => bcrypt('BillahBillah'),
+                'created_at' => Carbon::now(),
             ],
         ]);
     }
