@@ -24,6 +24,7 @@
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold">{{$e->nama}}</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ipsa temporibus ullam blanditiis</p>
+                            <p class="card-text">{{\Carbon\Carbon::parse($e->tanggal_mulai)->toFormattedDateString()}}</p>
                             <p class="card-text">{{$e->alamat}}</p>
                         </div>
                     </div>
