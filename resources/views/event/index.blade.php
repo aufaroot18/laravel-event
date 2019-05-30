@@ -13,7 +13,7 @@
 						<p class="card-text">{{$m->alamat}}</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary">Edit</a>
+						<a href="{{action('EventController@editEvent', ['id' => $m->id])}}" class="btn btn-primary">Edit</a>
 						<a href="#" class="btn btn-success">Detail</a>
 					</div>
 				</div>
