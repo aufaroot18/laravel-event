@@ -28,7 +28,7 @@
   </div>
   <li class="nav-item">
     <a class="nav-link" href="{{action('EventController@createEvent')}}">
-      <i class="fas fa-fw fa-chart-area"></i>
+      <i class="fas fa-pencil-alt"></i>
       <span>Create Events</span></a>
   </li>
   <li class="nav-item">
@@ -61,17 +61,17 @@
   </div>
   <li class="nav-item">
     <a class="nav-link" href="{{ route('profile') }}">
-      <i class="fas fa-fw fa-chart-area"></i>
+      <i class="fas fa-user-circle"></i>
       <span>My Account</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ route('password') }}">
-      <i class="fas fa-fw fa-chart-area"></i>
+      <i class="fas fa-key"></i>
       <span>Password</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">
-      <i class="fas fa-fw fa-chart-area"></i>
+      <i class="fas fa-sign-out-alt"></i>
       <span>Logout</span></a>
   </li>
   <!-- End Account -->
