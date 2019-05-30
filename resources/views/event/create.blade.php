@@ -20,6 +20,24 @@
 			</div>
 		</div>
 		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Tanggal Mulai</label>
+			<div class="col-md-10">
+				<input type="datetime-local" class="form-control" id="tanggal_mulai" placeholder="Tanggal Mulai" name="tanggal_mulai">
+				@error('tanggal_mulai')
+					<p class="text-danger mb-0">{{ $message }}</p>
+				@enderror
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Tanggal Selesai</label>
+			<div class="col-md-10">
+				<input type="datetime-local" class="form-control" id="tanggal_selesai" placeholder="Tanggal Selesai" name="tanggal_selesai">
+				@error('tanggal_selesai')
+					<p class="text-danger mb-0">{{ $message }}</p>
+				@enderror
+			</div>
+		</div>
+		<div class="form-group row">
 			<label class="col-md-2 col-form-label">Alamat</label>
 			<div class="col-md-10">
 				<input type="text" class="form-control" id="alamat" placeholder="Alamat" name="alamat">
