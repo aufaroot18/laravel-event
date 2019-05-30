@@ -22,6 +22,8 @@ Route::prefix('dashboard')->group(function() {
 	Route::get('event/', 'EventController@index');
 	Route::get('event/create', 'EventController@createEvent');
 	Route::post('event', 'EventController@storeEvent');
+	Route::get('event/{id}/edit', 'EventController@editEvent');
+	Route::put('event/{id}', 'EventController@updateEvent');
 });
 
 // Profile Resource
