@@ -40,7 +40,7 @@
                     @guest
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Create Event</a>
+                            <a href="{{action('EventController@createEvent')}}" class="nav-link">Create Event</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('login')}}" class="nav-link mr-2">Login</a>
@@ -53,7 +53,7 @@
                     @auth
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Create Event</a>
+                            <a href="{{action('EventController@createEvent')}}" class="nav-link">Create Event</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
