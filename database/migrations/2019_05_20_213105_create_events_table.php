@@ -18,6 +18,8 @@ class CreateEventsTable extends Migration
             $table->string('nama');
             $table->text('alamat');
             $table->text('deskripsi');
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
