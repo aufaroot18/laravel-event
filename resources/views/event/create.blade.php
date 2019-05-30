@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
 	<h1 class="h3 mb-4 text-gray-800">Create Event</h1>
 	@if(session('status'))
 		<div class="alert alert-success">
