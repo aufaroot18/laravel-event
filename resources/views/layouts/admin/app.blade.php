@@ -102,6 +102,14 @@
   <script src="{{asset('sbadmin/js/demo/chart-area-demo.js')}}"></script>
   <script src="{{asset('sbadmin/js/demo/chart-pie-demo.js')}}"></script>
 
+  <!-- CKeditor -->
+  <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('deskripsi', {
+      height: 300,
+    });
+  </script>
+
 </body>
 
 </html>
