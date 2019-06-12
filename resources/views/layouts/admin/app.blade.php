@@ -36,7 +36,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        @include('layouts.admin.header')
+        @include('layouts.admin.navbar')
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
