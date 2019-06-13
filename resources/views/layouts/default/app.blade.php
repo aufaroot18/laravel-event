@@ -19,14 +19,8 @@
         @include('layouts.default.nav')
         <!-- Navbar End -->
 
-        <!-- Header: Jumbotron -->
-        @include('layouts.default.header')
-        <!-- Header End -->
-
         <!-- Main Content -->
-        <main>
-            @yield('content')
-        </main>
+        @yield('content')
         <!-- Main Content End -->
 
         <!-- Footer -->
