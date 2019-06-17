@@ -33,7 +33,7 @@
                 @endforeach
             </div>
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-primary">See more Event</a>
+                <a href="explore/all" class="btn btn-primary">See more Event</a>
             </div>
         </div>
     </section>
