@@ -15,9 +15,13 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
+// Explore Resource
+Route::get('explore/all', 'ExploreController@index');
+
+// Dashboard
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-// Event Resource
+// Dashboard Event Resource
 Route::prefix('dashboard')->group(function() {
 	Route::get('event/', 'EventController@index');
 	Route::get('event/create', 'EventController@createEvent');
@@ -26,7 +30,7 @@ Route::prefix('dashboard')->group(function() {
 	Route::put('event/{id}', 'EventController@updateEvent');
 });
 
-// Profile Resource
+// Dashboard Profile Resource
 Route::prefix('dashboard')->group(function() {
 	Route::get('profile', 'ProfileController@showProfile')->name('profile');
 	Route::put('profile', 'ProfileController@updateProfile');
