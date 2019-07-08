@@ -27,8 +27,15 @@ class EventController extends Controller {
             'tanggal_mulai' => 'required',
             'tanggal_selesai' => 'required',
     		'alamat' => 'required',
+            'gambar' => 'required',
     		'deskripsi' => 'required',
     	]);
+
+        // Upload File
+        $file = $request->file('gambar');
+        $file_name = time()."_".$file->getClientOriginalName();
+        $folder_name = 'gambar';
+        $file->move($folder_name, $file_name);
 
     	// Store to DB
     	Event::create([
@@ -37,6 +44,7 @@ class EventController extends Controller {
             'tanggal_selesai' => $request->tanggal_selesai,
     		'alamat' => $request->alamat,
     		'deskripsi' => $request->deskripsi,
+            'gambar' => $file_name,
     		'user_id' => $request->user()->id,
     	]);
 
