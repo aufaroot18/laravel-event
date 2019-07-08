@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Hash;
 use App\User;
 
 class ProfileController extends Controller {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+    
     public function showProfile(Request $request) {
     	$user = User::find($request->user()->id);
     	return view('profile.profile', ['user' => $user]);
