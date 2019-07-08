@@ -8,7 +8,7 @@
 			{{session('status')}}
 		</div>
 	@endif
-	<form action="{{action('EventController@storeEvent')}}" method="POST">
+	<form action="{{action('EventController@storeEvent')}}" method="POST" enctype="multipart/form-data">
 		@csrf
 		<div class="form-group row">
 			<label class="col-md-2 col-form-label">Nama Event</label>
@@ -42,6 +42,15 @@
 			<div class="col-md-10">
 				<input type="text" class="form-control" id="alamat" placeholder="Alamat" name="alamat">
 				@error('alamat')
+					<p class="text-danger mb-0">{{ $message }}</p>
+				@enderror
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2 col-form-label">Gambar</label>
+			<div class="col-md-10">
+				<input type="file" class="form-control-file" id="gambar" name="gambar">
+				@error('gambar')
 					<p class="text-danger mb-0">{{ $message }}</p>
 				@enderror
 			</div>
