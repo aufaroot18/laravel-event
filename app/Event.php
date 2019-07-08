@@ -10,6 +10,6 @@ class Event extends Model {
     }
 
     protected $fillable = [
-    	'nama', 'alamat', 'deskripsi', 'user_id', 'tanggal_mulai', 'tanggal_selesai'
+    	'nama', 'alamat', 'deskripsi', 'gambar', 'user_id', 'tanggal_mulai', 'tanggal_selesai'
     ];
 }
