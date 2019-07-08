@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('nama');
             $table->text('alamat');
             $table->text('deskripsi');
+            $table->string('gambar');
             $table->dateTime('tanggal_mulai');
             $table->dateTime('tanggal_selesai');
             $table->unsignedBigInteger('user_id');
