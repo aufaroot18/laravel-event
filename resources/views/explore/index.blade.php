@@ -10,7 +10,7 @@
                 @foreach($event as $e)
                     <div class="col-md-4 mb-4">
                         <div class="card h-100">
-                            <img src="http://placehold.jp/302x200.png" alt="" class="card-img-top">
+                            <img src="{{url('gambar/'.$e->gambar)}}" alt="" class="card-img-top" height="200" width="300">
                             <div class="card-body">
                                 <h5 class="card-title font-weight-bold">{{$e->nama}}</h5>
                                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ipsa temporibus ullam blanditiis</p>
