@@ -57,15 +57,22 @@ class EventController extends Controller {
         return view('event.edit', ['event' => $event]);
     }
 
-    public function updateEvent($id, Request $request) {
+    public function updateEvent(Request $request, $id) {
         // Validation Form Input
         $validateData = $request->validate([
             'nama' => 'required',
             'tanggal_mulai' => 'required',
             'tanggal_selesai' => 'required',
             'alamat' => 'required',
+            'gambar' => 'required',
             'deskripsi' => 'required',
         ]);
+
+        // Upload File
+        $file = $request->file('gambar');
+        $file_name = time()."_".$file->getClientOriginalName();
+        $folder_name = 'gambar';
+        $file->move($folder_name, $file_name);
 
         // Update to DB
         Event::where('id', $id)->update([
@@ -74,6 +81,7 @@ class EventController extends Controller {
             'tanggal_selesai' => $request->tanggal_selesai,
             'alamat' => $request->alamat,
             'deskripsi' => $request->deskripsi,
+            'gambar' => $file_name,
             'user_id' => $request->user()->id,
         ]);
 
