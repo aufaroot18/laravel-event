@@ -4,14 +4,19 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- Title -->
-    <title>Event Laravel</title>
+    <title>Event</title>
+    
+    <!-- Font Awe Some -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-0c38nfCMzF8w8DBI+9nTWzApOpr1z0WuyswL4y6x/2ZTtmj/Ki5TedKeUcFusC/k" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
     <div id="app">

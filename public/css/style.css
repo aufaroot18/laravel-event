@@ -1,0 +1,183 @@
+/*Font*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap");
+/*Font*/
+
+/*
+Catatan UI:
+1. Font: Nunito Sans dan Rubik
+	- Heading: Nunito Sans
+	- Body: Rubik
+	- Use:
+		font-family: 'Nunito Sans', sans-serif;
+		font-family: 'Rubik', sans-serif;
+
+2. Warna
+- Title: #151515
+- Body: #999999
+- Footer:
+	- Background: #151515
+	- Color: #FFFFFF
+- Button: 
+	- Standart: #4829B2
+	- Hover: #3b2293
+- Menu:
+	- Standart: rgba(0, 0, 0, 0.5)
+	- Hover: rgba(0, 0, 0, 0.7)
+
+3. Struktur:
+- Navbar
+- Jumbotron
+- Main Content
+	- Card
+- Footer
+
+4. Resource:
+https://webuildthemes.com/go/
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	color: #999999;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+h1, h2, h5 {
+	font-family: 'Nunito Sans', sans-serif;
+	color: #151515;
+	font-weight: 300!important;
+}
+
+.btn {
+	background-color: #4829B2;
+	border-color: #4829B2;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #3b2293;
+	border-color: #3b2293;
+}
+
+/*Navbar*/
+.navbar {
+	background-color: #FFF;
+	padding: 1em;
+}
+
+.navbar .navbar-brand {
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 24px;
+	color: #151515;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+}
+
+.navbar .navbar-brand:hover {
+	color: #151515;
+}
+
+.navbar-nav .nav-item .nav-link {
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 300;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+	color: rgba(0, 0, 0, 0.7);
+}
+/*End of Navbar*/
+
+/*Jumbotron*/
+.jumbotron {
+	background-color: #fff;
+}
+
+.jumbotron h1 {	
+	margin-bottom: 0.5em;
+	font-size: 3.75rem;
+}
+
+.jumbotron p {
+	font-weight: 400;
+	line-height: 2;
+	margin-bottom: 2em;
+}
+/*End of Jumbotron*/
+
+/*Content*/
+.content {
+	padding: 4em 0;
+	background-color: #F5F5F5;
+}
+.content h2 {
+	padding-bottom: 1em;
+	font-size: 2.5rem;
+}
+
+.content .see-all {
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 20px;
+	color: #4829B2;
+}
+
+.content .see-all:hover {
+	color: #3b2293;
+}
+/*End of Content*/
+
+/*Card*/
+.card {
+	border: 0 none;
+	box-shadow: 0 1px 5px #dcdcdc;
+	transition: opacity 0.4s;
+}
+
+.card:hover {
+	opacity: 0.8;
+}
+
+.card .card-body .card-title {
+	font-weight: 400;
+	margin-bottom: 0.5em;
+}
+
+.card .card-body .card-text {
+	margin-bottom: 0.5em;
+}
+
+.card .card-body .card-text .fas {
+	margin-right: 0.5em;
+	color: #4829B2;
+}
+
+.card .card-body .card-text .fa-map-marker-alt {
+	margin-right: 0.6em;
+	color: #4829B2;
+}
+/*End of Card*/
+
+/*Footer*/
+footer {
+	background-color: #151515;
+	padding: 2em 0;	
+}
+
+footer .container {
+	padding: 0;
+}
+
+footer .nav .nav-item .nav-link {
+	transition: 0.3s;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+footer .nav .nav-item .nav-link:hover {
+	color: #fff;
+}
+/*End of Footer*/
