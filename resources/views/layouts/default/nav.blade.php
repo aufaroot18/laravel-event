@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a href="{{route('home')}}" class="navbar-brand">
-            Event Laravel
+            Event
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
                     <a href="{{route('home')}}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="explore/all" class="nav-link">Browse Event</a>
+                    <a href="/explore/all" class="nav-link">Browse Event</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Blog</a>
@@ -25,10 +25,10 @@
                     <a href="{{action('EventController@createEvent')}}" class="nav-link">Create Event</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('login')}}" class="nav-link mr-2">Login</a>
+                    <a href="{{route('login')}}" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('register')}}" class="btn btn-success">Register</a>
+                    <a href="{{route('register')}}" class="nav-link">Register</a>
                 </li>
             </ul>
             @endguest
