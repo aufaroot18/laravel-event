@@ -1,40 +1,58 @@
-/*Font*/
+/* ==========================================================================
+   Note
+   ========================================================================== */
+
+/**
+ * Font
+ * Jenis Font: Nunito Sans dan Rubik
+ * Heading: Nunito Sans
+ * Body: Rubik
+ *
+ * Warna
+ * Title: #151515
+ * Body: #999999
+ *
+ * Footer
+ * Background: #151515
+ * Color: #FFF;
+ *
+ * Button
+ * Standart: #4829B2
+ * Hover: #3b2293
+ *
+ * Menu
+ * Standart: rgba(0, 0, 0, 0.5)
+ * Hover: rgba(0, 0, 0, 0.7)
+ *
+ * Struktur
+ * Navbar
+ * Jumbotron
+ * Main Content
+ * 	Card
+ * Card
+ *
+ * Resource
+ * https://webuildthemes.com/go/
+ */
+
+/* ==========================================================================
+   End of Note
+   ========================================================================== */
+
+/* ==========================================================================
+   Font
+   ========================================================================== */
+   
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap");
-/*Font*/
 
-/*
-Catatan UI:
-1. Font: Nunito Sans dan Rubik
-	- Heading: Nunito Sans
-	- Body: Rubik
-	- Use:
-		font-family: 'Nunito Sans', sans-serif;
-		font-family: 'Rubik', sans-serif;
+/* ==========================================================================
+   Enf of Font
+   ========================================================================== */
 
-2. Warna
-- Title: #151515
-- Body: #999999
-- Footer:
-	- Background: #151515
-	- Color: #FFFFFF
-- Button: 
-	- Standart: #4829B2
-	- Hover: #3b2293
-- Menu:
-	- Standart: rgba(0, 0, 0, 0.5)
-	- Hover: rgba(0, 0, 0, 0.7)
-
-3. Struktur:
-- Navbar
-- Jumbotron
-- Main Content
-	- Card
-- Footer
-
-4. Resource:
-https://webuildthemes.com/go/
-*/
+/* ==========================================================================
+   Component
+   ========================================================================== */
 
 html {
 	scroll-behavior: smooth;
@@ -50,7 +68,7 @@ body {
 h1, h2, h3, h5 {
 	font-family: 'Nunito Sans', sans-serif;
 	color: #151515;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 a {
@@ -74,7 +92,24 @@ a:hover {
 	border-color: #3b2293;
 }
 
-/*Navbar*/
+.fas, .far {
+	margin-right: 0.5em;
+	color: #4829B2;
+}
+
+.fa-map-marker-alt {
+	margin-right: 0.6em;
+	color: #4829B2;
+}
+
+/* ==========================================================================
+   End of Component
+   ========================================================================== */
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
 .navbar {
 	background-color: #FFF;
 	padding: 1em;
@@ -100,9 +135,15 @@ a:hover {
 .navbar-nav .nav-item .nav-link:hover {
 	color: rgba(0, 0, 0, 0.7);
 }
-/*End of Navbar*/
 
-/*Jumbotron*/
+/* ==========================================================================
+   End of Navbar
+   ========================================================================== */
+
+/* ==========================================================================
+   Jumbotron
+   ========================================================================== */
+
 .jumbotron {
 	background-color: #fff;
 }
@@ -118,9 +159,15 @@ a:hover {
 	margin-bottom: 2em;
 	font-weight: 400;
 }
-/*End of Jumbotron*/
 
-/*Content*/
+/* ==========================================================================
+   End of Jumbotron
+   ========================================================================== */
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
 .content {
 	padding: 4em 0;
 	background-color: #F5F5F5;
@@ -140,9 +187,15 @@ a:hover {
 .content .see-all:hover {
 	color: #3b2293;
 }
-/*End of Content*/
 
-/*Card*/
+/* ==========================================================================
+   End of Content
+   ========================================================================== */
+
+/* ==========================================================================
+   Card
+   ========================================================================== */
+
 .card {
 	border: 0 none;
 	box-shadow: 0 1px 5px #dcdcdc;
@@ -162,18 +215,14 @@ a:hover {
 	margin-bottom: 0.5em;
 }
 
-.card .card-body .card-text .fas {
-	margin-right: 0.5em;
-	color: #4829B2;
-}
+/* ==========================================================================
+   End of Card
+   ========================================================================== */
 
-.card .card-body .card-text .fa-map-marker-alt {
-	margin-right: 0.6em;
-	color: #4829B2;
-}
-/*End of Card*/
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
-/*Footer*/
 footer {
 	background-color: #151515;
 	padding: 2em 0;
@@ -191,11 +240,70 @@ footer .nav .nav-item .nav-link {
 footer .nav .nav-item .nav-link:hover {
 	color: #fff;
 }
-/*End of Footer*/
 
-/*Login and Register*/
+/* ==========================================================================
+   End of Footer
+   ========================================================================== */
 
-/*Card*/
+/* ==========================================================================
+   Detail
+   ========================================================================== */
+
+.detail {
+	margin-top: 2em;
+}
+
+.detail .head {
+	margin-bottom: 5em;
+}
+
+.detail .head img {
+	width: 600px;
+	height: 337px;
+	object-fit: cover;
+}
+
+.detail h1 {
+	font-weight: 400;
+	margin-bottom: 0.5em;
+}
+
+.detail .head p {
+	margin-bottom: 0.3em;
+	font-size: 1.2em;
+}
+
+.detail .head a {
+	margin-top: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.detail .body {
+	background: #F5F5F5;
+}
+
+.detail .body h3 {
+	font-weight: 400;
+	margin: 2em 0 1em 0;
+}
+
+.detail .body p {
+	font-size: 1.2em;
+	margin-bottom: 3em;
+	text-align: justify;
+}
+
+/* ==========================================================================
+   End of Detail
+   ========================================================================== */
+
+/* ==========================================================================
+   Login and Register
+   ========================================================================== */
+
+/* Card
+   ========================================================================== */
 
 .login .card:hover, .register .card:hover {
 	opacity: 1;
@@ -205,4 +313,9 @@ footer .nav .nav-item .nav-link:hover {
 	font-weight: 300;
 }
 
-/*End of Login and Register*/
+/* End of Card
+   ========================================================================== */
+
+/* ==========================================================================
+   End of Login and Register
+   ========================================================================== */
