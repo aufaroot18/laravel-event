@@ -78,7 +78,7 @@
 
             </div>
             <div class="text-center mt-4">
-                <a href="explore/all" class="see-all float-right">See All Event</a>
+                <a href="/explore" class="see-all float-right">See All Event</a>
             </div>
         </div>
     </section>

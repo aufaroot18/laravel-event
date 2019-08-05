@@ -12,7 +12,7 @@
                     <a href="{{route('home')}}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/explore/all" class="nav-link">Browse Event</a>
+                    <a href="/explore" class="nav-link">Browse Event</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Blog</a>
