@@ -1,12 +1,12 @@
 @extends('layouts.auth.app')
 
 @section('content')
-<div class="container">
+<div class="container register">
     <div class="row justify-content-center mt-5">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Create an Account</h3>
+                    <h2 class="card-title text-center">Create an Account</h2>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group">

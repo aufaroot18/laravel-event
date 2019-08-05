@@ -47,10 +47,20 @@ body {
 	font-size: 1rem;
 }
 
-h1, h2, h5 {
+h1, h2, h3, h5 {
 	font-family: 'Nunito Sans', sans-serif;
 	color: #151515;
-	font-weight: 300!important;
+	font-weight: 300;
+}
+
+a {
+	color: #4829B2;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3b2293;
+	text-decoration: none;
 }
 
 .btn {
@@ -100,12 +110,13 @@ h1, h2, h5 {
 .jumbotron h1 {	
 	margin-bottom: 0.5em;
 	font-size: 3.75rem;
+	font-weight: 400;
 }
 
 .jumbotron p {
-	font-weight: 400;
 	line-height: 2;
 	margin-bottom: 2em;
+	font-weight: 400;
 }
 /*End of Jumbotron*/
 
@@ -165,7 +176,7 @@ h1, h2, h5 {
 /*Footer*/
 footer {
 	background-color: #151515;
-	padding: 2em 0;	
+	padding: 2em 0;
 }
 
 footer .container {
@@ -181,3 +192,17 @@ footer .nav .nav-item .nav-link:hover {
 	color: #fff;
 }
 /*End of Footer*/
+
+/*Login and Register*/
+
+/*Card*/
+
+.login .card:hover, .register .card:hover {
+	opacity: 1;
+}
+
+.login .card .card-body .card-title, .register .card .card-body .card-title {
+	font-weight: 300;
+}
+
+/*End of Login and Register*/
