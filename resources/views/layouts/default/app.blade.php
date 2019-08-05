@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
@@ -18,8 +18,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
-<body>
-    <div id="app">
+<body class="h-100">
+    <div id="app" class="d-flex flex-column h-100">
         <!-- Navbar -->
         @include('layouts.default.nav')
         <!-- Navbar End -->
