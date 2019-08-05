@@ -4,9 +4,13 @@
 <!-- Jumbotron -->
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Create, Join, and Share Event.</h1>
-        <p class="lead w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, totam, dolore? Deleniti minus beatae, ducimus a dolorem nesciunt. Nihil eius autem aliquid consequatur aut, amet dolor sapiente earum cumque quidem.</p>
-        <a href="#see" class="btn btn-primary btn-lg">See Event</a>
+        <div class="row">
+            <div class="col-md-9">
+                <h1 class="display-4">Create, Join, and Share Event.</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, totam, dolore? Deleniti minus beatae, ducimus a dolorem nesciunt. Nihil eius autem aliquid consequatur aut, amet dolor sapiente earum cumque quidem.</p>
+                <a href="#see" class="btn btn-primary btn-lg">See Event</a>
+            </div>
+        </div>
     </div>
 </div>
 
