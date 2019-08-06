@@ -27,7 +27,7 @@ class EventController extends Controller {
             'tanggal_mulai' => 'required',
             'tanggal_selesai' => 'required',
     		'alamat' => 'required',
-            'gambar' => 'required',
+            'gambar' => 'required| ',
     		'deskripsi' => 'required',
     	]);
 
@@ -58,21 +58,27 @@ class EventController extends Controller {
     }
 
     public function updateEvent(Request $request, $id) {
+        $event = Event::find($id);
+
         // Validation Form Input
         $validateData = $request->validate([
             'nama' => 'required',
-            'tanggal_mulai' => 'required',
-            'tanggal_selesai' => 'required',
+            // 'tanggal_mulai' => 'required',
+            // 'tanggal_selesai' => 'required',
             'alamat' => 'required',
-            'gambar' => 'required',
             'deskripsi' => 'required',
         ]);
 
         // Upload File
         $file = $request->file('gambar');
-        $file_name = time()."_".$file->getClientOriginalName();
-        $folder_name = 'gambar';
-        $file->move($folder_name, $file_name);
+        if($request->hasFile('gambar')) {
+            $file_name = time()."_".$file->getClientOriginalName();
+            $folder_name = 'gambar';
+            $file->move($folder_name, $file_name);
+        }
+        else {
+            $file_name = $event->gambar;
+        }
 
         // Update to DB
         Event::where('id', $id)->update([
