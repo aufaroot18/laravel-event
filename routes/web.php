@@ -16,7 +16,10 @@ Route::get('/', 'HomeController@index')->name('home');
 Auth::routes();
 
 // Explore Resource
-Route::get('explore/all', 'ExploreController@index');
+Route::prefix('explore')->group(function() {
+	Route::get('/', 'ExploreController@index')->name('explore.index');
+	Route::get('{id}', 'ExploreController@show')->name('explore.show');
+});
 
 // Dashboard
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
