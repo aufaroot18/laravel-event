@@ -23,7 +23,7 @@
 		<div class="form-group row">
 			<label class="col-md-2 col-form-label">Tanggal Mulai</label>
 			<div class="col-md-10">
-				<input type="datetime-local" class="form-control" id="tanggal_mulai" placeholder="Tanggal Mulai" name="tanggal_mulai">
+				<input type="datetime-local" class="form-control" id="tanggal_mulai" placeholder="Tanggal Mulai" name="tanggal_mulai" value="{{\Carbon\Carbon::parse($event->tanggal_mulai)->format('Y-m-d')}}T{{\Carbon\Carbon::parse($event->tanggal_mulai)->format('H:i')}}">
 				@error('tanggal_mulai')
 					<p class="text-danger mb-0">{{ $message }}</p>
 				@enderror
@@ -32,7 +32,7 @@
 		<div class="form-group row">
 			<label class="col-md-2 col-form-label">Tanggal Selesai</label>
 			<div class="col-md-10">
-				<input type="datetime-local" class="form-control" id="tanggal_selesai" placeholder="Tanggal Selesai" name="tanggal_selesai">
+				<input type="datetime-local" class="form-control" id="tanggal_selesai" placeholder="Tanggal Selesai" name="tanggal_selesai" value="{{\Carbon\Carbon::parse($event->tanggal_selesai)->format('Y-m-d')}}T{{\Carbon\Carbon::parse($event->tanggal_selesai)->format('H:i')}}">
 				@error('tanggal_selesai')
 					<p class="text-danger mb-0">{{ $message }}</p>
 				@enderror

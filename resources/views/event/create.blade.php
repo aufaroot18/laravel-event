@@ -22,7 +22,7 @@
 		<div class="form-group row">
 			<label class="col-md-2 col-form-label">Tanggal Mulai</label>
 			<div class="col-md-10">
-				<input type="datetime-local" class="form-control" id="tanggal_mulai" placeholder="Tanggal Mulai" name="tanggal_mulai">
+				<input type="datetime-local" class="form-control" id="tanggal_mulai" placeholder="Tanggal Mulai" name="tanggal_mulai" value="2019-12-25T08:30">
 				@error('tanggal_mulai')
 					<p class="text-danger mb-0">{{ $message }}</p>
 				@enderror
@@ -31,7 +31,7 @@
 		<div class="form-group row">
 			<label class="col-md-2 col-form-label">Tanggal Selesai</label>
 			<div class="col-md-10">
-				<input type="datetime-local" class="form-control" id="tanggal_selesai" placeholder="Tanggal Selesai" name="tanggal_selesai">
+				<input type="datetime-local" class="form-control" id="tanggal_selesai" placeholder="Tanggal Selesai" name="tanggal_selesai" value="2019-12-25T12:00">
 				@error('tanggal_selesai')
 					<p class="text-danger mb-0">{{ $message }}</p>
 				@enderror
