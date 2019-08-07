@@ -40,3 +40,8 @@ Route::prefix('dashboard')->group(function() {
 	Route::get('password', 'ProfileController@showPassword')->name('password');
 	Route::put('password', 'ProfileController@updatePassword');
 });
+
+// Join Event
+Route::prefix('explore/{id}')->group(function() {
+	Route::get('join', 'JoinController@join')->middleware('auth');
+});
