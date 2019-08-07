@@ -30,56 +30,14 @@
                                 <a href="{{route('explore.show', ['id' => $e->id])}}" class="text-dark text-decoration-none">
                                     <h5 class="card-title d-inline-block">{{$e->nama}}</h5>
                                 </a>
-                                <p class="card-text"><i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($e->tanggal_mulai)->toFormattedDateString()}}</p>
+                                <p class="card-text">
+                                    <i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($e->tanggal_mulai)->format('M d Y, H:i')}}
+                                </p>
                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i>{{$e->alamat}}</p>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
-                <!-- For Fun -->
-                @foreach($event as $e)
-                    @if($loop->iteration == 5)
-                        @break
-                    @endif
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <a href="{{route('explore.show', ['id' => $e->id])}}">
-                                <img src="{{url('gambar/'.$e->gambar)}}" alt="" class="card-img-top" height="200" width="300">
-                            </a>
-                            <div class="card-body">
-                                <a href="{{route('explore.show', ['id' => $e->id])}}" class="text-dark text-decoration-none">
-                                    <h5 class="card-title d-inline-block">{{$e->nama}}</h5>
-                                </a>
-                                <p class="card-text"><i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($e->tanggal_mulai)->toFormattedDateString()}}</p>
-                                <p class="card-text"><i class="fas fa-map-marker-alt"></i>{{$e->alamat}}</p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-                @foreach($event as $e)
-                    @if($loop->iteration == 2)
-                        @break
-                    @endif
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <a href="{{route('explore.show', ['id' => $e->id])}}">
-                                <img src="{{url('gambar/'.$e->gambar)}}" alt="" class="card-img-top" height="200" width="300">
-                            </a>
-                            <div class="card-body">
-                                <a href="{{route('explore.show', ['id' => $e->id])}}" class="text-dark text-decoration-none">
-                                    <h5 class="card-title d-inline-block">{{$e->nama}}</h5>
-                                </a>
-                                <p class="card-text"><i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($e->tanggal_mulai)->toFormattedDateString()}}</p>
-                                <p class="card-text"><i class="fas fa-map-marker-alt"></i>{{$e->alamat}}</p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-                
-                <!-- For Fun -->
-
             </div>
             <div class="text-center mt-4">
                 <a href="/explore" class="see-all float-right">See All Event</a>

@@ -12,7 +12,7 @@
 					<h1>{{$event->nama}}</h1>
 					<p><i class="fas fa-map-marker-alt"></i>{{$event->alamat}}</p>
 					<p>
-						<i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($event->tanggal_mulai)->toFormattedDateString()}} - {{\Carbon\Carbon::parse($event->tanggal_akhir)->toFormattedDateString()}}
+						<i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($event->tanggal_mulai)->format('M d Y, H:i')}} - {{\Carbon\Carbon::parse($event->tanggal_selesai)->format('M d Y, H:i')}}
 					</p>
 					<p><i class="far fa-user"></i>Created by {{$user->name}}</p>
 					@auth
