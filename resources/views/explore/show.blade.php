@@ -15,7 +15,16 @@
 						<i class="fas fa-calendar-week"></i>{{\Carbon\Carbon::parse($event->tanggal_mulai)->toFormattedDateString()}} - {{\Carbon\Carbon::parse($event->tanggal_akhir)->toFormattedDateString()}}
 					</p>
 					<p><i class="far fa-user"></i>Created by {{$user->name}}</p>
-					<a href="#" class="btn btn-primary">Join Event</a>
+					@auth
+						@if($statusJoin)
+							<a href="#" class="btn btn-primary disabled">Joined</a>
+						@else
+							<a href="/explore/{{$event->id}}/join" class="btn btn-primary">Join Event</a>
+						@endif
+					@endauth
+					@guest
+						<a href="/explore/{{$event->id}}/join" class="btn btn-primary">Join Event</a>
+					@endguest
 				</div>
 			</div>
 		</div>
