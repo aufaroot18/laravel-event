@@ -15,8 +15,13 @@ class EventsTableSeeder extends Seeder
         	[
         		'nama' => 'Kajian Fiqh Kontemporer',
         		'alamat' => 'Masjid UI',
-        		'deskripsi' => 'Kajian Fiqh Kontemporer di Masjid UI',
-                'gambar' => 'belajar.jpg',
+        		'deskripsi' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                'gambar' => 'action.jpg',
         		'user_id' => 1,
                 'tanggal_mulai' => Carbon::create('2019', '04', '30'),
                 'tanggal_selesai' => Carbon::create('2019', '04', '30'),
@@ -25,8 +30,13 @@ class EventsTableSeeder extends Seeder
         	[
         		'nama' => 'Kajian Kepemudaan Zaman Now',
         		'alamat' => 'Masjid UI',
-        		'deskripsi' => 'Kajian Kepemudaan Zaman Now di Masjid UI',
-                'gambar' => 'belajar.jpg',
+        		'deskripsi' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                'gambar' => 'band.jpg',
                 'tanggal_mulai' => Carbon::create('2019', '05', '5'),
                 'tanggal_selesai' => Carbon::create('2019', '05', '5'),
         		'user_id' => 1,
@@ -35,8 +45,13 @@ class EventsTableSeeder extends Seeder
         	[
         		'nama' => 'Mabit 10 Hari Terakhir Ramadhan',
         		'alamat' => 'Masjid Nurul Fikri',
-        		'deskripsi' => 'Mabit 10 Hari Terakhir Ramadhan di Masjid Nurul Fikri',
-                'gambar' => 'belajar.jpg',
+        		'deskripsi' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                'gambar' => 'concert.jpg',
                 'tanggal_mulai' => Carbon::create('2019', '05', '10'),
                 'tanggal_selesai' => Carbon::create('2019', '05', '10'),
         		'user_id' => 2,
@@ -45,8 +60,13 @@ class EventsTableSeeder extends Seeder
         	[
         		'nama' => 'Mabit Bulan Muharram',
         		'alamat' => 'Masjid Nurul Fikri',
-        		'deskripsi' => 'Mabit Bulan Muharram di Masjid Nurul Fikri',
-                'gambar' => 'belajar.jpg',
+        		'deskripsi' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+                'gambar' => 'way.png',
                 'tanggal_mulai' => Carbon::create('2019', '05', '15'),
                 'tanggal_selesai' => Carbon::create('2019', '05', '15'),
         		'user_id' => 2,
