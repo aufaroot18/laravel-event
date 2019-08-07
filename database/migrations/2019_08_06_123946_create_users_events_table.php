@@ -16,7 +16,7 @@ class CreateUsersEventsTable extends Migration
         Schema::create('users_events', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            // create foreging key
+            // create foreign key
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('event_id');
 
