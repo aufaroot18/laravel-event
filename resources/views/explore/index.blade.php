@@ -6,6 +6,36 @@
     <section>
         <div class="container">
             <h2 class="text-center">See the Event</h2>
+            <form action="{{route('explore.search')}}" method="GET">
+                <div class="form-row">
+                    <div class="form-group col-md-10">
+                        <input class="form-control" type="text" placeholder="Search Event" name="search">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button type="submit" class="btn btn-primary btn-block">Search</button>
+                    </div>
+                </div>
+            </form>
+            <div class="text-right mb-3">
+                <div class="row">
+                    <div class="col-md-2 offset-10 pl-0">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle btn-block" type="button" data-toggle="dropdown">
+                                @if (isset($statusDropdown))
+                                    {{$statusDropdown}}
+                                @else
+                                    Sort
+                                @endif
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="{{route('explore.week')}}" class="dropdown-item">This Week</a>
+                                <a href="{{route('explore.month')}}" class="dropdown-item">This Month</a>
+                                <a href="{{route('explore.all')}}" class="dropdown-item">All Event</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 @foreach($event as $e)
                     <div class="col-md-4 mb-4">
