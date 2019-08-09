@@ -18,18 +18,18 @@ class HomeController extends Controller {
     	$to = $to->format('Y-m-d');
 
     	// get event this week
-    	$event = Event::whereBetween('tanggal_mulai', [$from, $to])->take(6)->get();
+    	$event = Event::whereBetween('tanggal_mulai', [$from, $to])->take(9)->get();
     	$status = "minggu ini";
 
     	// get event this month if this week not exist
     	if (count($event) == 0) {
-    		$event = Event::whereMonth('tanggal_mulai', date('m'))->take(6)->get();
+    		$event = Event::whereMonth('tanggal_mulai', date('m'))->take(9)->get();
     		$status = "bulan ini";
     	}
 
     	// get all event if this month not exist
     	if (count($event) == 0) {
-    		$event = Event::take(6)->get();
+    		$event = Event::take(9)->get();
     		$status = "semua";
     	}
 
