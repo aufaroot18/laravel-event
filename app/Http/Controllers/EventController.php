@@ -12,7 +12,8 @@ class EventController extends Controller {
 	}
 
 	public function index(Request $request) {
-		$myEvent = User::find($request->user()->id);
+        $idUser = $request->user()->id;
+		$myEvent = User::find($idUser)->events;
 		return view('event.index', ['myEvent' => $myEvent]);
 	}
 	
