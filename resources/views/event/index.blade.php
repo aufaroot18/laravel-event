@@ -4,7 +4,7 @@
 <div class="container-fluid">
 	<h1 class="h3 mb-4 text-gray-800">My Event</h1>
 	<div class="row">
-		@foreach($myEvent->events as $m)
+		@foreach($myEvent as $m)
 			<div class="col-md-3 mb-4">
 				<div class="card h-100 border-bottom-primary">
 					<div class="card-body">
