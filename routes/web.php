@@ -19,6 +19,10 @@ Auth::routes();
 // Explore Resource
 Route::prefix('explore')->group(function() {
 	Route::get('/', 'ExploreController@index')->name('explore.index');
+	Route::get('search', 'ExploreController@search')->name('explore.search');
+	Route::get('week', 'ExploreController@week')->name('explore.week');
+	Route::get('month', 'ExploreController@month')->name('explore.month');
+	Route::get('all', 'ExploreController@all')->name('explore.all');
 	Route::get('{id}', 'ExploreController@show')->name('explore.show');
 });
 
@@ -27,7 +31,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 // Dashboard Event Resource
 Route::prefix('dashboard')->group(function() {
-	Route::get('event/', 'EventController@index');
+	Route::get('event', 'EventController@index');
 	Route::get('event/create', 'EventController@createEvent');
 	Route::post('event', 'EventController@storeEvent');
 	Route::get('event/{id}/edit', 'EventController@editEvent');
