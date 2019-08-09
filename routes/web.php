@@ -31,7 +31,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 // Dashboard Event Resource
 Route::prefix('dashboard')->group(function() {
-	Route::get('event', 'EventController@index');
+	Route::get('event', 'EventController@index')->name('dashboard.event');
 	Route::get('event/create', 'EventController@createEvent');
 	Route::post('event', 'EventController@storeEvent');
 	Route::get('event/{id}/edit', 'EventController@editEvent');
