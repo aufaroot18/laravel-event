@@ -87,7 +87,7 @@
   	      <div class="row no-gutters align-items-center">
   	        <div class="col mr-2">
   	          <div class="font-weight-bold text-success text-uppercase mb-3">
-               <a class="text-success text-decoration-none" href="#">Events Was Joined</a> 
+               <a class="text-success text-decoration-none" href="{{route('dashboard.ticket')}}">Events Was Joined</a> 
               </div>
               <!-- 
                 Get My Event Joined
