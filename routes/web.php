@@ -41,6 +41,7 @@ Route::prefix('dashboard')->group(function() {
 // Dashboard Ticket Resource
 Route::prefix('dashboard')->group(function() {
 	Route::get('ticket', 'TicketController@index')->name('dashboard.ticket');
+	Route::get('ticket/pdf/{id}', 'TicketController@pdf')->name('dashboard.ticket.pdf');
 });
 
 // Dashboard Profile Resource
