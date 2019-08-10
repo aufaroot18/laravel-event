@@ -102,13 +102,20 @@ class ExploreController extends Controller {
     }
 
     public function show($id) {
-    	// status join
-    	$statusJoin =  UserEvent::where('event_id', $id)->where('user_id', Auth::id())->first();
+        // get event
+        $event = Event::where('id', $id)->first();
 
-    	// get event and creator of event
-    	$event = Event::where('id', $id)->first();
-    	$user = User::where('id', $event->user_id)->first();
-    	return view('explore.show', ['event' => $event, 'user' => $user, 'statusJoin' => $statusJoin]);
+        if ($event) {
+            // get status join: is user joined or not joined
+            $statusJoin =  UserEvent::where('event_id', $id)->where('user_id', Auth::id())->first();
+
+            // get creator of event
+            $user = User::where('id', $event->user_id)->first();
+            return view('explore.show', ['event' => $event, 'user' => $user, 'statusJoin' => $statusJoin]);
+        }
+        else {
+            return abort(404, 'Event Not Found');
+        }
     }
 
 }
