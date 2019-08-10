@@ -8,7 +8,9 @@
 			<div class="col-md-3 mb-4">
 				<div class="card h-100 border-bottom-primary">
 					<div class="card-body">
-						<h5 class="card-title font-weight-bold">{{$m->nama}}</h5>
+						<h5 class="text-primary card-title font-weight-bold">
+							<a class="text-primary text-decoration-none" href="{{route('explore.show', ['id' => $m->id])}}">{{$m->nama}}</a>
+						</h5>
 						<p class="card-text">{{\Carbon\Carbon::parse($m->tanggal_mulai)->toFormattedDateString()}}</p>
 						<p class="card-text">{{$m->alamat}}</p>
 					</div>
