@@ -38,6 +38,11 @@ Route::prefix('dashboard')->group(function() {
 	Route::put('event/{id}', 'EventController@updateEvent');
 });
 
+// Dashboard Ticket Resource
+Route::prefix('dashboard')->group(function() {
+	Route::get('ticket', 'TicketController@index')->name('dashboard.ticket');
+});
+
 // Dashboard Profile Resource
 Route::prefix('dashboard')->group(function() {
 	Route::get('profile', 'ProfileController@showProfile')->name('profile');
