@@ -18,6 +18,9 @@
 						  <i class="fas fa-map-marker-alt mr-2"></i>{{$m->alamat}}
 						<p>
 					</div>
+					<div class="card-footer">
+						<a href="{{route('dashboard.ticket.pdf', ['id' => $m->event_id])}}" class="btn btn-primary btn-block">Download Ticket</a>
+					</div>
 				</div>
 			</div>
 		@endforeach
