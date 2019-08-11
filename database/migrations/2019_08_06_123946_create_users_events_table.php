@@ -13,6 +13,7 @@ class CreateUsersEventsTable extends Migration
      */
     public function up()
     {
+        // ubah nama table dari users_events menjadi joins
         Schema::create('users_events', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
