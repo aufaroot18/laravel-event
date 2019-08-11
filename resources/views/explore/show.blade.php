@@ -17,7 +17,8 @@
 					<p><i class="far fa-user"></i>Created by {{$user->name}}</p>
 					@auth
 						@if($statusJoin)
-							<a href="#" class="btn btn-primary disabled">Joined</a>
+							<a href="#" class="btn btn-outline-primary disabled mr-2">Joined</a>
+							<a href="{{route('dashboard.ticket.pdf', ['id' => $event->id])}}" class="btn btn-primary">Download Ticket</a>
 						@else
 							<a href="/explore/{{$event->id}}/join" class="btn btn-primary">Join Event</a>
 						@endif
