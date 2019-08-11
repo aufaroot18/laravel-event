@@ -274,9 +274,8 @@ footer .nav .nav-item .nav-link:hover {
 }
 
 .detail .head a {
-	margin-top: 1.5em;
-	font-weight: bold;
 	text-transform: uppercase;
+	margin-top: 1.5em;
 }
 
 .detail .body {
