@@ -38,6 +38,9 @@ class ExploreController extends Controller {
     }
 
     public function search(Request $request) {
+        $validateData = $request->validate([
+            'search' => 'required',
+        ]);
         $searchEvent = $request->input('search');
         $event = Event::where('nama', 'like', '%'.$searchEvent.'%' )->paginate(6);
         

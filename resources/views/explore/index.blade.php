@@ -9,7 +9,7 @@
             <form action="{{route('explore.search')}}" method="GET">
                 <div class="form-row">
                     <div class="form-group col-md-10">
-                        <input class="form-control" type="text" placeholder="Search Event" name="search">
+                        <input class="form-control" type="text" placeholder="Search Event" name="search" required="required">
                     </div>
                     <div class="form-group col-md-2">
                         <button type="submit" class="btn btn-primary btn-block">Search</button>
@@ -18,7 +18,12 @@
             </form>
             <div class="text-right mb-3">
                 <div class="row">
-                    <div class="col-md-2 offset-10 pl-0">
+                    <div class="col-md-10 text-left">
+                        @error('search')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="col-md-2 pl-0">
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle btn-block" type="button" data-toggle="dropdown">
                                 @if (isset($statusDropdown))
