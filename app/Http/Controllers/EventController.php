@@ -28,7 +28,7 @@ class EventController extends Controller {
             'tanggal_mulai' => 'required',
             'tanggal_selesai' => 'required',
     		'alamat' => 'required',
-            'gambar' => 'required| ',
+            'gambar' => 'required|image',
     		'deskripsi' => 'required',
     	]);
 
@@ -64,8 +64,8 @@ class EventController extends Controller {
         // Validation Form Input
         $validateData = $request->validate([
             'nama' => 'required',
-            // 'tanggal_mulai' => 'required',
-            // 'tanggal_selesai' => 'required',
+            'tanggal_mulai' => 'required',
+            'tanggal_selesai' => 'required',
             'alamat' => 'required',
             'deskripsi' => 'required',
         ]);
