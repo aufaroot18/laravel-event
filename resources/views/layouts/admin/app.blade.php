@@ -101,9 +101,14 @@
   <!-- CKeditor -->
   <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
   <script>
-    CKEDITOR.replace('deskripsi', {
+    var editor = CKEDITOR.replace('deskripsi', {
       height: 300,
     });
+
+    editor.on( 'required', function( evt ) {
+        alert( 'Article content is required.' );
+        evt.cancel();
+    } );
   </script>
 
 </body>
