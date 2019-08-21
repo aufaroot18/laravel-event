@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-	<h1 class="h3 mb-4 text-gray-800">My Event</h1>
+	<h1 class="h3 mb-4 text-gray-800">My Tickets</h1>
 	<div class="row">
 		@foreach($myEventJoined as $m)
 			<div class="col-md-3 mb-4">
