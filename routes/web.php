@@ -36,6 +36,7 @@ Route::prefix('dashboard')->group(function() {
 	Route::post('event', 'EventController@storeEvent');
 	Route::get('event/{id}/edit', 'EventController@editEvent');
 	Route::put('event/{id}', 'EventController@updateEvent');
+	Route::get('event/{id}/detail', 'EventController@detailEvent');
 });
 
 // Dashboard Ticket Resource
