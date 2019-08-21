@@ -51,25 +51,23 @@
     </style>
   </head>
   <body>
-   @foreach($myEventJoined as $m)
-     <div class="container">
-       <div class="card">
-         <div class="card-header text-uppercase text-center">
-           <h5>Thank You, You Have Joined Event</h5>
-         </div>
-         <div class="card-body">
-           <h5 class="card-title text-uppercase">{{$m->nama}}</h5>
-           <h6 class="card-subtitle mb-3 text-muted">Event</h6>
-           <h5 class="card-title text-uppercase">{{$user->name}}</h5>
-           <h6 class="card-subtitle mb-3 text-muted">Name</h6>
-           <h5 class="card-title text-uppercase">{{$m->alamat}}</h5>
-           <h6 class="card-subtitle mb-3 text-muted">Alamat</h6>
-           <h5 class="card-title text-uppercase">{{\Carbon\Carbon::parse($m->tanggal_mulai)->format('M-d-Y, H:i')}}</h5>
-           <h6 class="card-subtitle mb-3 text-muted">Tanggal</h6>
-         </div>
+   <div class="container">
+     <div class="card">
+       <div class="card-header text-uppercase text-center">
+         <h5>Thank You, You Have Joined Event</h5>
+       </div>
+       <div class="card-body">
+         <h5 class="card-title text-uppercase">{{$myEventJoined->nama}}</h5>
+         <h6 class="card-subtitle mb-3 text-muted">Event</h6>
+         <h5 class="card-title text-uppercase">{{$user->name}}</h5>
+         <h6 class="card-subtitle mb-3 text-muted">Name</h6>
+         <h5 class="card-title text-uppercase">{{$myEventJoined->alamat}}</h5>
+         <h6 class="card-subtitle mb-3 text-muted">Alamat</h6>
+         <h5 class="card-title text-uppercase">{{\Carbon\Carbon::parse($myEventJoined->tanggal_mulai)->format('M-d-Y, H:i')}}</h5>
+         <h6 class="card-subtitle mb-3 text-muted">Tanggal</h6>
        </div>
      </div>
-   @endforeach
+   </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
