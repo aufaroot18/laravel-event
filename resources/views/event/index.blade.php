@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid">
-	<h1 class="h3 mb-4 text-gray-800">My Event</h1>
+	<h1 class="h3 mb-4 text-gray-800">My Events</h1>
 	<div class="row">
 		@foreach($myEvent as $m)
 			<div class="col-md-3 mb-4">
@@ -16,7 +16,7 @@
 					</div>
 					<div class="card-footer">
 						<a href="{{action('EventController@editEvent', ['id' => $m->id])}}" class="btn btn-primary">Edit</a>
-						<a href="#" class="btn btn-success">Detail</a>
+						<a href="{{action('EventController@detailEvent', ['id' => $m->id])}}" class="btn btn-success">Detail</a>
 					</div>
 				</div>
 			</div>
