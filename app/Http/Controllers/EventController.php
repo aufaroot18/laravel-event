@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use App\User;
+use App\UserEvent;
 
 class EventController extends Controller {
 	public function __construct() {
@@ -94,5 +95,12 @@ class EventController extends Controller {
 
         // Redirect and Set Flash Session Data
         return redirect()->action('EventController@editEvent', ['id' => $id])->with('status', 'Event Updated');
+    }
+
+    public function detailEvent($id) {
+        $idEvent = $id;
+        $userevent = UserEvent::where('event_id', $idEvent)->get();
+        $event = Event::where('id', $idEvent)->get();
+        return view('event.detail', ['userevent' => $userevent,'event' => $event]);
     }
 }
