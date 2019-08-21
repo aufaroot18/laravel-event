@@ -27,10 +27,10 @@ class TicketController extends Controller {
         $idEvent = $id;
         
         // get my event joined, one event
-        $myEventJoined = UserEvent::where('users_events.user_id', $idUser)->where('users_events.event_id', $idEvent)->leftJoin('events', 'users_events.event_id', '=', 'events.id') ->select('users_events.id', 'users_events.created_at', 'users_events.user_id', 'events.id as event_id', 'events.nama', 'events.alamat', 'events.deskripsi', 'events.gambar', 'events.tanggal_mulai', 'events.tanggal_selesai') ->get();
+        $myEventJoined = UserEvent::where('users_events.user_id', $idUser)->where('users_events.event_id', $idEvent)->leftJoin('events', 'users_events.event_id', '=', 'events.id') ->select('users_events.id', 'users_events.created_at', 'users_events.user_id', 'events.id as event_id', 'events.nama', 'events.alamat', 'events.deskripsi', 'events.gambar', 'events.tanggal_mulai', 'events.tanggal_selesai')->first();
 
         // print to pdf
-        if ($myEventJoined == '[]') {
+        if ($myEventJoined == '') {
             return abort(404);
         }
         else {
